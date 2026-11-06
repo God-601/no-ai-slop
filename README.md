@@ -33,3 +33,5 @@ This project uses original wording and adapts general ideas from public work on 
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+See [`examples/README.md`](examples/README.md) for brief examples across the supported formats.
