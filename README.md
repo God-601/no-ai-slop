@@ -30,8 +30,14 @@ For agents not supported by the CLI, follow that agent's skill-folder convention
 
 This project uses original wording and adapts general ideas from public work on intent-preserving editing, domain-grounded visual design, progressive disclosure for skills, and cross-agent skill packaging. See [`skills/no-ai-slop/REFERENCES.md`](skills/no-ai-slop/REFERENCES.md) for links and attribution.
 
+See [`examples/README.md`](examples/README.md) for brief examples across the supported formats.
+
+## Evaluations
+
+The repository includes manual evaluation cases for intent preservation, factual restraint, false positives, and format-specific quality. See [`evals/README.md`](evals/README.md) and [`evals/evals.json`](evals/evals.json). These cases assess behavior; they are not AI detectors or proof of authorship.
+
+See [`ROADMAP.md`](ROADMAP.md) for the planned version sequence.
+
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-
-See [`examples/README.md`](examples/README.md) for brief examples across the supported formats.
