@@ -1,6 +1,6 @@
 # No AI Slop — Design document
 
-**Status:** Implemented as version 0.1.0  
+**Status:** Implemented; current development version 0.2.0
 **Date:** 2026-11-05  
 **Project name:** No AI Slop  
 **Repository:** `God-601/no-ai-slop`  
@@ -103,11 +103,12 @@ These references are inspiration and compatibility examples. Their full content,
 - The response explains concrete changes and discloses unresolved limitations.
 - No false detector, authorship, factual-check, visual-review, or test claims are made.
 - Initial examples demonstrate the workflow on text, image prompts/assets, a website/interface, and code.
+- Manual evaluation cases cover supported formats, at least one false positive, and the detector-evasion boundary; their rubric guides review without claiming statistical reliability.
 
 ## Implementation decisions
 
 - Public GitHub repository: `God-601/no-ai-slop`.
 - MIT license, original wording, and attribution links for related skills.
 - Package layout: `skills/no-ai-slop/SKILL.md` plus format-specific references.
-- Initial development version: 0.1.0.
+- Initial development version: 0.1.0; 0.2.0 adds manual behavior evaluation cases and a qualitative rubric.
 - Dynamic reference loading is used where supported; the main skill keeps a concise fallback workflow.
