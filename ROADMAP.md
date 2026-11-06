@@ -13,9 +13,9 @@ promises or completed features; scope can change based on real use and review.
   specificity, and honest reporting.
 - Keep the cases outside the runtime skill so they do not add context cost.
 
-## 0.3.0 — PT-BR text and voice
+## 0.3.0 milestone — PT-BR text and voice
 
-**Planned**
+**Delivered in 1.0.0**
 
 - Add context-aware Brazilian Portuguese guidance for common registers without
   treating a list of phrases as a detector.
@@ -23,37 +23,46 @@ promises or completed features; scope can change based on real use and review.
 - Preserve facts, modality, commitments, and uncertainty during edits.
 - Add culturally grounded examples and corresponding evaluation cases.
 
-## 0.4.0 — Visual review
+## 0.4.0 milestone — Visual review
 
-**Planned**
+**Delivered in 1.0.0**
 
 - Distinguish editing an image prompt from reviewing or editing an image asset.
 - Prioritize visual issues by impact on the brief and intended use.
 - Make the workflow explicit about available image tools and actual inspection.
 - Add cases for typography, subject integrity, and uncertain visual cues.
 
-## 0.5.0 — Websites and interfaces
+## 0.5.0 milestone — Websites and interfaces
 
-**Planned**
+**Delivered in 1.0.0**
 
 - Ground visual direction in product, audience, and task.
 - Include functional, responsive, accessibility, and deceptive-pattern review.
 - Separate design recommendations from checks actually performed in a browser.
 
-## 0.6.0 — Code and repository workflows
+## 0.6.0 milestone — Code and repository workflows
 
-**Planned**
+**Delivered in 1.0.0**
 
 - Strengthen project-aware minimal-diff guidance and behavior preservation.
 - Separate code review, patch generation, and direct editing behaviors.
 - Report commands, tests, and build checks only when run, with their actual
   results.
 
-## 1.0.0 — Stable cross-agent package
+## 1.0.0 — Stable cross-format package
 
-**Planned**
+**Implemented**
 
 - Document supported installation paths and known agent-specific limits.
 - Review trigger wording, reference routing, examples, and evaluation cases.
-- Publish a stable release only after the package has been tried across
-  representative agents and formats.
+- Publish a stable cross-format package with explicit host verification limits.
+- Cross-agent runtime compatibility remains an open follow-up; it is not
+  claimed as tested by this release.
+
+## Post-1.0 follow-up
+
+- Collect real use cases and add them to the manual evaluation set.
+- Repeat the cases across host agents before publishing any compatibility
+  claims.
+- Revisit format guidance when evidence shows a recurring failure; do not add
+  pattern lists just to make the skill longer.

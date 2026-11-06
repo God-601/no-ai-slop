@@ -1,6 +1,12 @@
 # Visual review mode
 
-Use this mode for generated images, illustrations, renders, image prompts, icons, and other visual assets. If the user supplied an image and wants it changed, use the available image-editing capability. If no editing tool can access it, provide a concrete edit prompt or list of fixes instead of claiming completion.
+Use this mode for image prompts, image review, and image editing. First identify which task the user requested; a prompt rewrite is not an image edit, and an image critique is not a claim about its origin.
+
+## Choose the visual task
+
+- **Prompt writing or revision:** return a concise prompt that preserves the requested subject, action, style, composition, and exclusions.
+- **Image review:** inspect the supplied image with an available visual tool, then describe visible issues and their impact. If no image is attached or accessible, say so and ask for it.
+- **Image editing:** use an available image-editing capability on the supplied image. If unavailable, provide a specific edit prompt or steps and state that no image was changed.
 
 ## Preserve the brief
 
@@ -22,6 +28,6 @@ Do not assume a visible artifact is proof of AI generation. Do not add flaws, no
 
 ## Correct and report
 
-Make targeted edits that retain the original image's identity. Review the affected region and the whole composition when the tool allows it. Report what was changed and note any details that remain uncertain or could not be inspected.
+Make targeted edits that retain the original image's identity. Review the affected region and the full composition when the tool allows it. Distinguish visual review from editing, and report what was actually changed and inspected. Name uncertainties that affect the recommendation.
 
 For image prompts, specify subject, action, composition, style, lighting, materials, important constraints, and exclusions only as needed. Avoid bloated prompt lists and contradictory instructions.

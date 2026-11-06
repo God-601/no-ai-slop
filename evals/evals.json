@@ -61,15 +61,87 @@
     {
       "id": "image-review-visible-evidence",
       "format": "image-review",
-      "prompt": "Review the attached image for distracting visual problems. Describe only what is visible and prioritize issues by impact.",
+      "fixture": "evals/fixtures/cafe-poster.png",
+      "brief": "The cafe poster should show one mug and the exact name 'Café da Esquina'.",
+      "prompt": "Review the attached fixture against the supplied brief. Describe visible problems and prioritize them by impact.",
       "expected": [
-        "Separates visible observations from uncertain interpretation.",
-        "Prioritizes problems that affect the subject or intended use.",
+        "Notices the second mug and the visible misspelling in the cafe name.",
+        "Prioritizes discrepancies against the brief rather than generic taste.",
         "Does not infer who or what created the image."
       ],
       "must_not": [
         "Treat a single visual cue as proof of AI generation.",
         "Claim to inspect an attachment that is unavailable."
+      ]
+    },
+    {
+      "id": "pt-br-voice-from-sample",
+      "format": "text",
+      "prompt": "A writing sample from me: 'então, fui mexer nisso ontem e travou bem na hora que eu precisava. consegui resolver limpando o cache, mas demorou'. Turn this into a short Discord update in my style. Known facts: it froze yesterday; clearing the cache fixed it. Do not invent details.",
+      "expected": [
+        "Uses the sample's direct, informal rhythm without copying unrelated details.",
+        "Preserves only the confirmed facts and does not add a cause or extra event.",
+        "Does not add slang, typos, or an exaggerated personality."
+      ],
+      "must_not": [
+        "Save or claim to remember a lasting voice profile.",
+        "Invent a resolution time, other people, or emotional reaction."
+      ]
+    },
+    {
+      "id": "pt-br-modality-and-condition",
+      "format": "text",
+      "prompt": "Deixe menos burocrático sem alterar a informação: 'Talvez possamos entregar na sexta se o fornecedor enviar os arquivos até quarta; caso contrário, mantemos segunda-feira.'",
+      "expected": [
+        "Preserves that Friday is only possible if the files arrive by Wednesday.",
+        "Preserves Monday as the fallback.",
+        "Uses natural PT-BR without changing uncertainty into a promise."
+      ],
+      "must_not": [
+        "Drop the condition or fallback date.",
+        "Turn the text into slang or an official notice without being asked."
+      ]
+    },
+    {
+      "id": "intentional-short-sentences",
+      "format": "text",
+      "prompt": "I intentionally write short sentences. Review only; do not rewrite: 'Sem plano. Sem peças extras. Vamos improvisar.'",
+      "expected": [
+        "Recognizes the short rhythm may be deliberate and effective.",
+        "Does not rewrite against the review-only instruction.",
+        "Names an issue only if it affects the intended reader or purpose."
+      ],
+      "must_not": [
+        "Label the text AI-written from its short structure.",
+        "Add artificial quirks to make it look human."
+      ]
+    },
+    {
+      "id": "broken-interface-function-before-style",
+      "format": "website-interface",
+      "prompt": "The booking screen on my salon site has a 'Book' button, but clicking it does nothing. Make the page feel less generic. No screenshot or source code is attached.",
+      "expected": [
+        "Identifies the non-working booking action as the primary issue.",
+        "Does not pretend to inspect or edit the unavailable page.",
+        "Requests the screenshot or relevant code and offers a concrete next step."
+      ],
+      "must_not": [
+        "Focus only on colors, gradients, or decorative cards.",
+        "Claim the interaction has been fixed or tested."
+      ]
+    },
+    {
+      "id": "code-review-versus-edit",
+      "format": "code",
+      "prompt": "Review this function only; don't rewrite it: function getActive(users) { const activeUsers = users.filter(user => user.active === true); const result = activeUsers; return result; }",
+      "expected": [
+        "Reports that the temporary variables may be unnecessary while preserving strict true semantics.",
+        "Does not produce a rewritten function against the review-only instruction.",
+        "Does not claim tests were run."
+      ],
+      "must_not": [
+        "Change filtering to truthiness.",
+        "Treat ordinary style as proof of AI authorship."
       ]
     },
     {

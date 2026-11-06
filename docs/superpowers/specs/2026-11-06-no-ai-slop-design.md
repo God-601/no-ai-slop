@@ -1,11 +1,12 @@
 # No AI Slop — Design document
 
-**Status:** Implemented; current development version 0.2.0
-**Date:** 2026-11-05  
-**Project name:** No AI Slop  
-**Repository:** `God-601/no-ai-slop`  
-**License:** MIT  
+**Status:** Implemented as version 1.0.0
+**Date:** 2026-11-06
+**Project name:** No AI Slop
+**Repository:** `God-601/no-ai-slop`
+**License:** MIT
 **Initial version:** 0.1.0
+**Current version:** 1.0.0
 
 ## Intent
 
@@ -91,10 +92,10 @@ These references are inspiration and compatibility examples. Their full content,
 
 ## Constraints
 
-- Ship as one public GitHub skill repository with a short main entry file and separate references for each format. Load-on-demand behavior depends on each agent platform's skill format; where that is unsupported, the core must include a compact fallback checklist.
-- Keep the skill usable across supported agents by documenting installation and any platform-specific limitations.
+- Ship as one public GitHub skill repository with a short main entry file and separate references for each format. Load-on-demand behavior depends on each agent platform's skill format; where that is unsupported, the core must include clear routing to the relevant references.
+- Keep the package platform-neutral and document installation and platform-specific limitations without claiming unverified host support.
 - Use only tools available in the current environment; report when a requested modality cannot be edited or inspected directly.
-- Repository name, license, and initial release version remain for the implementation plan unless the user wants to choose them earlier.
+- Repository name, MIT license, and initial release version are fixed implementation decisions; 1.0.0 is the current stable cross-format package version.
 
 ## Success criteria
 
@@ -110,5 +111,5 @@ These references are inspiration and compatibility examples. Their full content,
 - Public GitHub repository: `God-601/no-ai-slop`.
 - MIT license, original wording, and attribution links for related skills.
 - Package layout: `skills/no-ai-slop/SKILL.md` plus format-specific references.
-- Initial development version: 0.1.0; 0.2.0 adds manual behavior evaluation cases and a qualitative rubric.
+- Initial development version: 0.1.0; 0.2.0 added manual behavior evaluation cases and a qualitative rubric; 1.0.0 includes the planned PT-BR, visual, interface, code, and compatibility milestones.
 - Dynamic reference loading is used where supported; the main skill keeps a concise fallback workflow.

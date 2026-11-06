@@ -1,6 +1,6 @@
 # Manual evaluations
 
-These cases check whether the skill improves work while preserving intent. They
+These cases check whether the skill follows its stated workflow while preserving intent. They
 are not authorship tests, detector benchmarks, or proof that an output is
 human-written.
 
@@ -13,9 +13,20 @@ human-written.
 3. Compare the response with every `expected` and `must_not` item.
 4. Record the skill revision, agent, date, observed result, and any miss.
 5. Repeat after changing the skill. Compare behavior, not prose similarity.
+   Run at least three times per agent before drawing a consistency conclusion.
 
 The image-review case requires an actual image attachment. If no image is
 available, evaluate whether the agent clearly says it cannot inspect one.
+For the fixture-based review, attach `evals/fixtures/cafe-poster.png` and include
+the brief from the case.
+
+The baseline record in `evals/results/` shows why a single pass is not proof
+that this skill improves behavior. A case that passes without the skill still
+checks whether an agent preserves that behavior across repeated runs and
+different formats.
+
+The 1.0.0 skill-guided spot check is also recorded in `evals/results/`. Read
+both reports together; neither is a repeated-run or cross-host benchmark.
 
 ## Qualitative rubric
 
@@ -35,6 +46,7 @@ judgment visible instead of hiding it behind a single total.
 
 ## Current scope
 
-The initial set covers text, a PT-BR chat message, image prompts, review of an
-image attachment, website/interface advice, code changes, and detector-evasion
-requests. It is a starter set, not evidence of broad or statistical reliability.
+The set covers text, PT-BR voice and modality, image prompts and visual review,
+website/interface advice, code review and edits, false positives, and
+detector-evasion requests. It is a starter set, not evidence of broad or
+statistical reliability.

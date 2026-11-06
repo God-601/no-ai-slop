@@ -1,6 +1,9 @@
 ---
 name: no-ai-slop
-description: Improve AI-assisted or AI-sounding text, image prompts and visuals, websites, interfaces, and code. Preserve the user's original idea and voice, remove generic or careless execution, make the correction directly, and explain what changed. Use whenever the user asks to humanize, polish, de-slop, refine, or make generated content feel more specific and intentional.
+description: Use when the user asks to review, create, or improve text, image prompts or assets, websites, interfaces, code, or other content they call generic, formulaic, careless, incoherent, unfinished, AI-sounding, or AI slop; also when they ask to humanize or de-slop content.
+license: MIT
+metadata:
+  version: "1.0.0"
 ---
 
 # No AI Slop
@@ -9,13 +12,14 @@ Improve the work, not the user's idea. Make it specific to the brief, useful to 
 
 ## Workflow
 
-1. **Read the brief and artifact.** Identify the user's goal, intended audience, format, constraints, references, and existing conventions. Use relevant context already provided; do not ask for it again.
-2. **Protect the intent.** Preserve the core idea, meaning, facts, voice, and requirements. Do not invent personal experiences, evidence, sources, product features, visual details, or project conventions.
-3. **Choose the right review mode.** Read only the applicable file in `references/`: `text.md`, `visuals.md`, `websites-and-interfaces.md`, `code.md`, or `other-formats.md`. Mixed artifacts may need more than one.
-4. **Find concrete issues.** Describe specific problems in the artifact, not vague claims that it "looks AI." Treat style cues as weak evidence about authorship; a single phrase, visual artifact, or code pattern proves nothing.
-5. **Correct directly.** Make the smallest set of meaningful changes that improves the work while preserving its direction. Ask a focused question only if a missing detail could materially change the correction. Otherwise state a brief assumption and proceed.
-6. **Review the result.** Compare it with the original request and the relevant reference checklist. Use available tools when the user asked for an edit or when direct inspection is needed. Do not claim an inspection, factual check, build, or test that did not happen.
-7. **Deliver the revised artifact first.** Then explain the main changes and why they improve the result. Mention only material remaining limits or uncertainties.
+1. **Identify the task mode.** Follow the user's request to review only, edit an existing artifact, or create something new. A request for critique is not permission to rewrite; a request for an edit is not a reason to stop at advice.
+2. **Read the brief and artifact.** Identify goal, audience, format, constraints, references, and surrounding project conventions. Reuse context already supplied; do not ask again.
+3. **Protect intent and evidence.** Preserve the idea, facts, voice, constraints, and requirements. Do not invent personal experience, sources, claims, product features, visual details, or project conventions.
+4. **Route to the right guidance.** Read only relevant files in `references/`. For Brazilian Portuguese text, also read `text-pt-br.md`. Read `voice-matching.md` only when the user asks for voice matching or supplies a writing sample for that purpose. Mixed work may need multiple modes.
+5. **Diagnose concrete issues.** Point to observable problems and their effect on the intended use. A phrase, image artifact, or code pattern alone does not establish AI authorship.
+6. **Make a focused correction.** Keep changes proportional to the problem. Ask only when a missing detail could materially change the result; otherwise state a brief assumption and proceed.
+7. **Review and report honestly.** Compare the result with the brief and relevant format guidance. Use tools for inspection or editing when available. Report only checks actually performed, and do not claim detector success, visual inspection, fact-checking, or code execution that did not occur.
+8. **Deliver in the requested mode.** For edits and creations, present the artifact first and then explain material changes. For review-only requests, provide findings and recommendations without rewriting the artifact.
 
 ## Quality priorities
 
@@ -36,6 +40,8 @@ Improve naturalness through substantive, context-aware editing. This can reduce 
 ## Reference routing
 
 - Text or prose: read `references/text.md`.
+- Brazilian Portuguese: also read `references/text-pt-br.md`.
+- Voice matching from a supplied sample or style guide: also read `references/voice-matching.md`.
 - Images, illustrations, image prompts, or visual assets: read `references/visuals.md`.
 - Websites or interfaces: read `references/websites-and-interfaces.md`.
 - Source code: read `references/code.md`.

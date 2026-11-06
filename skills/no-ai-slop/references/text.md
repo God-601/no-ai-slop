@@ -29,6 +29,8 @@ These are review prompts, not banned forms. Keep any pattern that serves the arg
 5. Match the intended register and language variety. Preserve the author's voice instead of imposing a default polished tone.
 6. Flag claims that cannot be checked from available context; do not silently make them sound more certain.
 
+For Brazilian Portuguese, also read [`text-pt-br.md`](text-pt-br.md). When the user explicitly asks to match their own voice or provides a writing sample for that purpose, read [`voice-matching.md`](voice-matching.md). Do not infer or save a personal voice profile without permission.
+
 ## Final pass
 
 Confirm that the revised text still means the same thing, each paragraph adds something, and no new claim or personal detail slipped in. Provide the revised text first, then summarize the substantive edits.

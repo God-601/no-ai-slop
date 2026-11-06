@@ -1,5 +1,7 @@
 # No AI Slop
 
+**Version 1.0.0**
+
 An agent skill for improving AI-assisted content without replacing the creator's idea. It edits directly, uses review rules suited to the format, and explains the changes.
 
 ## What it covers
@@ -9,6 +11,14 @@ An agent skill for improving AI-assisted content without replacing the creator's
 - Websites and user interfaces
 - Code
 - Other media through a purpose-first review workflow
+
+## Current status
+
+Version 1.0.0 includes the PT-BR text and voice guidance, visual task routing,
+interface and code review workflows, manual evaluation cases, and host
+compatibility notes. The package follows the Agent Skills directory format;
+runtime behavior has not been separately verified across every host. See
+[`docs/COMPATIBILITY.md`](docs/COMPATIBILITY.md).
 
 ## How it works
 
@@ -32,11 +42,11 @@ This project uses original wording and adapts general ideas from public work on 
 
 See [`examples/README.md`](examples/README.md) for brief examples across the supported formats.
 
+See [`ROADMAP.md`](ROADMAP.md) for the delivered milestones and [`CHANGELOG.md`](CHANGELOG.md) for release notes.
+
 ## Evaluations
 
 The repository includes manual evaluation cases for intent preservation, factual restraint, false positives, and format-specific quality. See [`evals/README.md`](evals/README.md) and [`evals/evals.json`](evals/evals.json). These cases assess behavior; they are not AI detectors or proof of authorship.
-
-See [`ROADMAP.md`](ROADMAP.md) for the planned version sequence.
 
 ## License
 

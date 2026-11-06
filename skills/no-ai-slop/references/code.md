@@ -2,6 +2,12 @@
 
 Use this mode for source code, scripts, configuration, and code generated for an existing project.
 
+## Choose the task
+
+- **Review:** report findings and their impact; do not edit unless asked.
+- **Patch or edit:** inspect the surrounding code and make the smallest change that meets the request.
+- **Create:** follow the repository's existing architecture, dependencies, supported versions, and style where available.
+
 ## Follow the project
 
 - Read surrounding code, documentation, and conventions before editing.
@@ -21,4 +27,4 @@ Do not rename variables, add irregular style, or delete useful comments merely t
 
 ## Review and report
 
-Use the repository's existing checks when the user asks for verification or when the requested workflow authorizes them. Otherwise, describe what was inspected and do not claim tests passed. Clearly separate code changes from checks actually performed.
+Run repository checks when the user requests them or the agreed project workflow requires them. State the exact commands and results. If checks were not run, say so plainly. A code review is not a test run, and a successful check does not prove unrelated behavior.
